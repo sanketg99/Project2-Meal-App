@@ -95,6 +95,7 @@ function displaySearchResults() {
 
 // Function to display a random meal image
 function displayRandomImage() {
+  searchBar.value = '';
   URL = `https://www.themealdb.com/api/json/v1/1/random.php`;
   createMeals(URL);
 }
@@ -136,4 +137,13 @@ async function displayFavoriteMeals() {
 // Event listeners
 searchBar.addEventListener('input', displaySearchResults); // Search bar input event
 randomButton.addEventListener('click', displayRandomImage); // Random image button click event
+randomButton.addEventListener('mouseenter', () => {
+  // Show text in the placeholder when hovering
+  searchBar.placeholder = 'Random meal will be displayed...';
+});
+
+randomButton.addEventListener('mouseleave', () => {
+  // Restore the original placeholder when not hovering
+  searchBar.placeholder = 'Discover dishes to your liking...';
+});
 myFavoriteMeals.addEventListener('click', displayFavoriteMeals); // Favorite meals button click event

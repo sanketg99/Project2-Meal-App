@@ -23,6 +23,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+.logo:hover{
+    transition: opacity 0.15s;
+    box-shadow: 2px 2px 2px #DFDFDF,-2px -2px 2px #DFDFDF;
+}
 
 
 #search-div {
@@ -57,7 +61,7 @@ body {
 
 button:hover {
     transition: opacity 0.15s;
-    box-shadow: 2.5px 2.5px 2.5px rgb(32, 32, 32);
+    box-shadow: 2.5px 2.5px 2.5px rgb(83, 81, 81);
 }
 
 /* #random-image {
@@ -89,7 +93,7 @@ button:hover {
     align-items: center;
     flex-wrap: wrap;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .images
@@ -118,7 +122,7 @@ button:hover {
 
 .images button
 {
-    background-color: #E0C555;
+    background-color: #e2aa31;
     width: 45%;
     height: 12%;
     color: #3C2C10;
@@ -156,7 +160,7 @@ button:hover {
 
 .details-page
 {
-    margin: 0 1% 2% 1%;
+    margin: 1.5% 1% 2% 1%;
     border: 1px solid #DFDFDF;
     width: 70%;
     color: white;
