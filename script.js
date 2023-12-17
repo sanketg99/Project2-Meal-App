@@ -33,12 +33,12 @@ async function displayFavoriteMeals() {
   mealsDiv.innerHTML = '';
 
   for (let meal of favouriteArray) {
-    
+
     const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal}`);
     const data = await response.json();
 
     let meals = data.meals[0];
-    
+
 
     const div = document.createElement('div');
     div.classList.add('images');
@@ -113,8 +113,7 @@ async function createMeals(URL) {
         <img src="${meals.strMealThumb}" alt="">
         <h4>${meals.strMeal}</h4>
         <button type="button" class='border-circle more-details' id='${meals.idMeal}'>More Details</button>
-        ${
-          favouriteArray.includes(meals.idMeal) ? `<a href="" class='favourite clicked' id='${meals.idMeal}'><i class="fa-sharp fa-solid fa-heart"></i></a>` : `<a href="" class='favourite' id='${meals.idMeal}'><i class="fa-sharp fa-solid fa-heart"></i></a>`
+        ${favouriteArray.includes(meals.idMeal) ? `<a href="" class='favourite clicked' id='${meals.idMeal}'><i class="fa-sharp fa-solid fa-heart"></i></a>` : `<a href="" class='favourite' id='${meals.idMeal}'><i class="fa-sharp fa-solid fa-heart"></i></a>`
         }`;
 
       mealsDiv.append(div);
@@ -135,10 +134,11 @@ async function createMeals(URL) {
 }
 
 
-
 // Event listeners
+
 searchBar.addEventListener('input', displaySearchResults); // Search bar input event
 randomButton.addEventListener('click', displayRandomImage); // Random image button click event
+
 randomButton.addEventListener('mouseenter', () => {
   // Show text in the placeholder when hovering
   searchBar.placeholder = 'Random meal will be displayed...';
@@ -148,4 +148,5 @@ randomButton.addEventListener('mouseleave', () => {
   // Restore the original placeholder when not hovering
   searchBar.placeholder = 'Discover dishes to your liking...';
 });
+
 myFavoriteMeals.addEventListener('click', displayFavoriteMeals); // Favorite meals button click event
