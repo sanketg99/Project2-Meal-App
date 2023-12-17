@@ -44,13 +44,13 @@ body {
 }
 
 #search-bar::placeholder {
-    color: rgb(40, 37, 37);
+    color: rgb(37, 35, 35);
 }
 
 #search-div button {
     background-color: #B72322;
     height: 40%;
-    color: white;
+    color: rgb(197, 191, 191);
     margin-right: 10%;
     font-size: 18px;
 }
@@ -60,25 +60,25 @@ button:hover {
     box-shadow: 2.5px 2.5px 2.5px rgb(32, 32, 32);
 }
 
-#random-image {
+/* #random-image {
     position: relative;
     display: inline-block;
-}
+} */
 
-.hidden-text {
+/* .hidden-text {
     display: none;
     position: absolute;
-    top: 44%;
+    top: 46%; */
     /* Position below the button */
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     font-size: 0.3em;
     color: #a09b9b;
-}
+} */
 
-#random-image:hover+.hidden-text {
+/* #random-image:hover+.hidden-text {
     display: block;
-}
+} */
 
 
 #meals-div
@@ -89,13 +89,14 @@ button:hover {
     align-items: center;
     flex-wrap: wrap;
     background-color: black;
+    opacity: 0.8;
 }
 
 .images
 {
     width: 30%;
     height: 45vh;
-    margin: 0 1% 2% 1%;
+    margin: 1.5% 1% 1% 1%;
     border: 1px solid #DFDFDF;
     padding-bottom: 1%;
   
@@ -133,12 +134,12 @@ button:hover {
     text-align: center;
     padding-top: 2%;
     border-radius: 50px;
-    color: white;
+    color: rgb(43, 41, 41);
     border: 1px solid white;
 }
 
 .clicked{
-    background-color: #DFDFDF !important;
+    background-color: #1e1d1d !important;
     color: red !important;
 }
 
